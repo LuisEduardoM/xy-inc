@@ -16,6 +16,8 @@ Hiberte
 
 Java 8
 
+Junit 5
+
 H2 Database
 
 # Como utilizar o projeto
@@ -34,4 +36,24 @@ $ mvn clean package
 
 $ java -jar target\xy-inc.jar
 
-3 - A aplicação irá rodando na porta 8100 no servidor local.
+3 - A aplicação irá rodar na porta 8100 no servidor local.
+
+# Como utilizar os serviços da API
+
+Listar todos
+
+GET http://localhost:8100/pontoInteresse/listarTodos
+
+Buscar por proximidade
+
+GET http://localhost:8100/pontoInteresse/buscarPorProximidade?coordenadaX=20&coordenadaY=10&distanciaMaxima=10
+
+Salvar
+
+POST localhost:8100/pontoInteresse/salvar { "nome": "Churrascaria", "coordenadaX": 28, "coordenadaY": 2 }
+
+# Testes
+
+O projeto possui testes unitários, testes de repositório, serviço e controlador. Para rodar os testes basta executar o seguinte comando:
+
+$ mvn test
