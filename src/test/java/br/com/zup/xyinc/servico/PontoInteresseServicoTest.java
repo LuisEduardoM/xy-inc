@@ -33,7 +33,7 @@ public class PontoInteresseServicoTest extends XyIncApplicationTests {
 	@Test
 	public void buscarTodos() {
 		List<PontoInteresse> pontoInteresseList = Arrays.asList(pontoInteresse);
-		Mockito.when(pontoInteresseServico.buscarTodos()).thenReturn(pontoInteresseList);
+		Mockito.when(pontoInteresseServico.listarTodos()).thenReturn(pontoInteresseList);
 		assertNotNull(pontoInteresseList.stream().findFirst());
 	}
 

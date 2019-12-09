@@ -15,12 +15,12 @@ public class PontoInteresseServico {
 	@Autowired
 	private PontoInteresseRepositorio pontoInteresseRepositorio;
 
-	public List<PontoInteresse> buscarTodos() {
+	public List<PontoInteresse> listarTodos() {
 		return pontoInteresseRepositorio.findAll();
 	}
 
 	public List<PontoInteresse> buscarPorProximidade(Integer coordenadaX, Integer coordenadaY, Integer distanciaMaxima) {
-		return buscarTodos().stream()
+		return listarTodos().stream()
 				.filter(item -> Math.sqrt(Math.pow((item.getCoordenadaX() - coordenadaX), 2)
 						+ Math.pow((item.getCoordenadaY() - coordenadaY), 2)) <= distanciaMaxima)
 				.collect(Collectors.toList());

@@ -24,9 +24,9 @@ public class PontoInteresseControlador {
 	@Autowired
 	private PontoInteresseServico pontoInteresseServico;
 
-	@GetMapping("/buscarTodos")
-	public List<PontoInteresse> buscarTodos() {
-		return pontoInteresseServico.buscarTodos();
+	@GetMapping("/listarTodos")
+	public List<PontoInteresse> listarTodos() {
+		return pontoInteresseServico.listarTodos();
 	}
 
 	@GetMapping("buscarPorProximidade")

@@ -52,9 +52,9 @@ public class PontoInteresseControladorTest extends XyIncApplicationTests {
 	}
 
 	@Test	
-	public void buscarTodos() throws Exception {
-		String path = BASE_PATH + "/buscarTodos";
-		Mockito.when(pontoInteresseServicoMock.buscarTodos()).thenReturn(PontoInteresseBuilder.buildAll());
+	public void listarTodos() throws Exception {
+		String path = BASE_PATH + "/listarTodos";
+		Mockito.when(pontoInteresseServicoMock.listarTodos()).thenReturn(PontoInteresseBuilder.buildAll());
 		mvc.perform(get(path).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andExpect(jsonPath("$", hasSize(7)));
 	}
 
