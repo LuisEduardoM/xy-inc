@@ -50,7 +50,7 @@ GET http://localhost:8100/pontoInteresse/buscarPorProximidade?coordenadaX=20&coo
 
 Salvar
 
-POST localhost:8100/pontoInteresse/salvar { "nome": "Churrascaria", "coordenadaX": 28, "coordenadaY": 2 }
+POST http://localhost:8100/pontoInteresse/salvar { "nome": "Churrascaria", "coordenadaX": 28, "coordenadaY": 2 }
 
 # Testes
 
