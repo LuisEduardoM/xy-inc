@@ -12,7 +12,7 @@ Spring Data
 
 Rest
 
-Hiberte
+Hibernate
 
 Java 8
 
